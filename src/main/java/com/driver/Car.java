@@ -19,17 +19,18 @@ public class Car extends Vehicle {
         this.currentGear = currentGear;
         this.seats = seats;
     }
-    public void changeGear(int newGear){
-        if(newGear > 0 && newGear <= gears){
+
+    public void changeGear(int newGear) {
+        if (newGear > 0 && newGear <= gears) {
             this.currentGear = newGear;
-            System.out.println("Changed to gear"+newGear);
-        }else{
+            System.out.println("Changed to gear " + newGear);
+        } else {
             System.out.println("Invalid gear");
         }
         System.out.println("changeGear method called - The gear is changed to: " + currentGear);
     }
 
-    public void changeSpeed(int newSpeed, int newDirection){
+    public void changeSpeed(int newSpeed, int newDirection) {
         super.move(newSpeed, newDirection);
         System.out.println("changeSpeed method called - The speed is changed to: " + newSpeed + ", and the direction is changed to: " + newDirection + " degrees");
     }
